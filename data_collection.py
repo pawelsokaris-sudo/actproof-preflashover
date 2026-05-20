@@ -38,7 +38,7 @@ import zipfile
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Dict, List, Optional
-from urllib.request import urlretrieve
+from urllib.request import urlopen, Request
 
 import chess
 import chess.engine
@@ -113,6 +113,12 @@ def ensure_pgn() -> Path:
         return combined_path
 
     # Download missing ZIPs
+    # NOTE: TWIC server (BlueHost shared hosting) blocks the default
+    # urllib User-Agent ("Python-urllib/3.x") with HTTP 406. We send an
+    # explicit identifying User-Agent. This is an implementation detail —
+    # the bytes received and the resulting concatenated PGN are bit-identical
+    # regardless of which UA fetches them. See ADDENDUM-003 for the bug history.
+    UA = "Mozilla/5.0 (ActProof preregistered research; +https://github.com/pawelsokaris-sudo/actproof-preflashover)"
     for issue in TWIC_ISSUES:
         zip_path = DATA_DIR / f"twic{issue}g.zip"
         if zip_path.exists():
@@ -120,8 +126,10 @@ def ensure_pgn() -> Path:
         url = TWIC_BASE_URL.format(n=issue)
         print(f"Downloading TWIC #{issue}: {url}")
         try:
-            urlretrieve(url, zip_path)
-            print(f"  → {zip_path.stat().st_size / 1e3:.0f} KB")
+            req = Request(url, headers={"User-Agent": UA})
+            with urlopen(req, timeout=60) as resp, open(zip_path, "wb") as out:
+                out.write(resp.read())
+            print(f"  -> {zip_path.stat().st_size / 1e3:.0f} KB")
         except Exception as e:
             raise RuntimeError(
                 f"Failed to download TWIC #{issue} from {url}: {e}"
