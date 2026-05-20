@@ -3,7 +3,7 @@
 **Status:** Issued **before** primary data collection. No preregistered run has been performed under the affected code.
 **Affected code state:** `data_collection.py` at SHA-256 `fb5a7b3f618b9d23261c3ed63fede5a2306a77595efee6ee42462502502a6c9c` (committed at `e3f6ce3`, frozen at `freeze-v1.2`).
 **Defective behaviour observed in:** smoke v4 attempt, 2026-05-20, Ubuntu 24.04 VPS, Python 3.12.3.
-**Corrected commit:** `<TO BE FILLED ON COMMIT>`
+**Corrected commit:** `d634a50816cacd8f3c6dd032d9f8021d93acc99e` (2026-05-20T21:14:45+02:00).
 **New preregistration tag:** `freeze-v1.3` (supersedes `freeze-v1.2`; scientific protocol unchanged).
 
 ---
@@ -91,6 +91,6 @@ This pattern is uncomfortable but instructive: the cost of catching three defect
 ## Sign-off
 
 - **Author:** Paweł Łuczak
-- **Addendum date:** `<TO BE FILLED ON COMMIT>`
-- **Commit hash of corrected `data_collection.py`:** `<TO BE FILLED ON COMMIT>`
+- **Addendum date:** `2026-05-20T21:14:45+02:00`
+- **Commit hash of corrected `data_collection.py`:** `d634a50816cacd8f3c6dd032d9f8021d93acc99e`
 - **New preregistration tag:** `freeze-v1.3` (annotated; supersedes `freeze-v1.2`)
