@@ -1,0 +1,47 @@
+  …processed 20,000 games
+  …processed 40,000 games
+  …processed 60,000 games
+  …processed 80,000 games
+  …processed 100,000 games
+  …processed 120,000 games
+  …processed 140,000 games
+  …processed 160,000 games
+  …processed 180,000 games
+  …processed 200,000 games
+  …processed 220,000 games
+  …processed 240,000 games
+
+Total games in archive: 253,321
+
+=== INDEPENDENT PER-CRITERION COUNTS ===
+  classical_1500+           836  ( 0.33%)
+  classical_1800+           388  ( 0.15%)
+  decisive              224,027  (88.44%)
+  draw                   29,294  (11.56%)
+  elo_2400_both         221,299  (87.36%)
+  elo_2500_both         125,787  (49.66%)
+  elo_2600_both          45,682  (18.03%)
+  no_bot                239,644  (94.60%)
+  no_fen                253,321  (100.00%)
+  plies_ge_30           246,412  (97.27%)
+  rapid_or_better        14,013  ( 5.53%)
+
+=== CASCADE: PREREGISTERED FILTER (frozen order) ===
+  0_elo_2600_both                    45,682  (18.03%)
+  1_+classical                          141  ( 0.06%)
+  2_+decisive                            17  ( 0.01%)
+  3_+plies_30                            17  ( 0.01%)
+  4_+standard_start                      17  ( 0.01%)
+
+=== CASCADE: RELAXED REFERENCE (Elo≥2400, rapid+) ===
+  0_elo_2400_both                   221,299  (87.36%)
+  1_+rapid_or_better                 11,155  ( 4.40%)
+  2_+decisive                         8,515  ( 3.36%)
+  3_+plies_30                         8,240  ( 3.25%)
+  4_+standard_start                   8,240  ( 3.25%)
+  5_+no_bot                           6,029  ( 2.38%)
+
+Games matching ALL frozen criteria: 0
+Required for preregistered run     : 50
+→ Insufficient for any preregistered run. ADDENDUM-002 required.
+DIAG_DONE
