@@ -4,7 +4,7 @@
 **Affected code state:** Smoke test (n=5, depth=12) executed on Stockfish 18 / Ubuntu 24.04, 2026-05-20.
 **Repo state at affected run:** `freeze-v1.0` (commits `ea68db3`, `9d150ba`). `data_collection.py` was a post-freeze working file, intentionally uncommitted until smoke verification per the original procedure — see §6 of PREREGISTRATION.md.
 **Affected file (never committed):** `data_collection.py` with SHA-256 `71290191c837a1891c3c743f4cb4722ac5162fa78d336bfb3c7db8710b64d040`. The defective line in `passes_filter()` read: `if "[Bot]" in h.get("White", "") or "[Bot]" in h.get("Black", ""):` (verifiable by inspection of any reviewer who reconstructs the file content from this addendum's "Root cause" section).
-**Corrected commit:** `<commit hash of fix>` (to be filled at addendum commit time).
+**Corrected commit:** `574f69bd2f3fb6e71e0c50b89c87df8a875dcd71` (2026-05-20T19:51:01+02:00).
 **New preregistration tag:** `freeze-v1.1` (supersedes `freeze-v1.0`; scientific protocol unchanged).
 
 ## 1. What happened
@@ -91,6 +91,6 @@ The author acknowledges that the original implementation in `freeze-v1.0` was bu
 ## Sign-off
 
 - **Author:** Paweł Łuczak
-- **Addendum date:** `<to be filled>`
-- **Commit hash of corrected `data_collection.py`:** `<to be filled>`
+- **Addendum date:** `2026-05-20T19:51:01+02:00`
+- **Commit hash of corrected `data_collection.py`:** `574f69bd2f3fb6e71e0c50b89c87df8a875dcd71`
 - **New preregistration tag:** `freeze-v1.1` (annotated)
