@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Stockfish binaries (track separately if needed)
+stockfish
+stockfish.exe
+
+# Data
+*.pgn.zst
+*.pgn.bz2
+lichess_elite/
+/cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
