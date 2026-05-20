@@ -3,8 +3,8 @@
 **Author:** Paweł Łuczak, Sokaris Oprogramowanie / ActProof
 **Co-author of preregistration:** Claude (Anthropic), in advisory capacity
 **Document status:** FROZEN — to be timestamped by Git commit + signed tag before any data collection begins.
-**Commit hash of analysis code at time of freeze:** `<TO BE FILLED ON COMMIT>`
-**Date of freeze:** `<TO BE FILLED ON COMMIT>`
+**Commit hash of analysis code at time of freeze:** `ea68db3efa37a54a450c6f6124c2ddb504816d23`
+**Date of freeze:** `2026-05-20T16:16:56+02:00`
 
 ---
 
@@ -113,9 +113,9 @@ If any of the above is required to obtain a positive result, the result is **nul
 
 ## Sign-off
 
-- **Author signature (timestamp via GPG-signed Git tag):** `<TO BE FILLED>`
-- **Repository commit hash at freeze:** `<TO BE FILLED>`
-- **SHA-256 of this document at freeze:** `<TO BE FILLED, computed on final version>`
+- **Author signature (timestamp via Git annotated tag `freeze-v1.0` + external archival):** GPG signature unavailable on author's system at freeze time; cryptographic timestamp guaranteed by external archives (Software Heritage / Zenodo DOI) referenced after archival.
+- **Repository commit hash at freeze:** `ea68db3efa37a54a450c6f6124c2ddb504816d23`
+- **SHA-256 of this document at freeze:** `f682e815d526158426c097999806958cb8f01c9f2ea52c6f302b8b281c1a0ddb` (computed at commit `ea68db3`, before this hash was written to the sign-off section; verifiable via `git checkout ea68db3 && sha256sum PREREGISTRATION.md`)
 
 ---
 
