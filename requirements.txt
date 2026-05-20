@@ -1,0 +1,19 @@
+# ActProof Pre-Flashover Detection — runtime dependencies
+#
+# Versions pinned to the environment used for primary analysis on author's VPS.
+# Replicators may use newer minor versions; major-version upgrades may shift
+# numerical results and should be documented as deviations.
+
+# Core
+python-chess==1.11.2     # PGN parsing, board state, UCI engine bridge
+numpy==2.4.6             # field discretisation, gradients, statistics
+scipy==1.17.1            # Wilcoxon signed-rank test, find_peaks
+
+# Visualization (used by actproof_dynamics.plot_trajectory at top-level import;
+# required at import time even when only data_collection is invoked)
+matplotlib==3.10.9
+
+# Tested with:
+#   Python 3.12.3
+#   Ubuntu 24.04 (noble)
+#   Stockfish 18 (linux x86-64 avx2, official build)
