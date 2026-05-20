@@ -5,8 +5,8 @@
 **Document status:** FROZEN — to be timestamped by Git commit + signed tag before any data collection begins.
 **Supersedes:** `PREREGISTRATION.md` (`freeze-v1.0`, `freeze-v1.1`), per ADDENDUM-002.
 **Changes from v1.0:** §4 (Source) and §3.x (TimeControl operationalisation) only. All other elements bit-for-bit identical.
-**Commit hash of analysis code at time of freeze:** `<TO BE FILLED ON COMMIT>`
-**Date of freeze:** `<TO BE FILLED ON COMMIT>`
+**Commit hash of analysis code at time of freeze:** `e3f6ce356545f8e9605b8866536104b0af1df5cf`
+**Date of freeze:** `2026-05-20T20:56:48+02:00`
 
 ---
 
@@ -123,8 +123,8 @@ If any of the above is required to obtain a positive result, the result is **nul
 ## Sign-off
 
 - **Author signature (timestamp via Git annotated tag `freeze-v1.2` + external archival):** GPG signature unavailable on author's system at freeze time; cryptographic timestamp guaranteed by external archives (Software Heritage / Zenodo DOI) referenced after archival.
-- **Repository commit hash at freeze:** `<TO BE FILLED>`
-- **SHA-256 of this document at freeze:** `<TO BE FILLED, computed on final version; verifiable via git checkout <freeze-commit> && sha256sum PREREGISTRATION-v1.2.md>`
+- **Repository commit hash at freeze:** `e3f6ce356545f8e9605b8866536104b0af1df5cf`
+- **SHA-256 of this document at freeze:** `feee71c20ab5171aa927bc9b9eb4eca9631b8b911d37a395891f9b62f75ad02b` (computed on commit `e3f6ce3` version with placeholders; verifiable via `git show e3f6ce3:PREREGISTRATION-v1.2.md | sha256sum`)
 
 ---
 

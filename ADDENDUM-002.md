@@ -113,7 +113,7 @@ The author additionally acknowledges that allowing two ADDENDUMS before any data
 ## Sign-off
 
 - **Author:** Paweł Łuczak
-- **Addendum date:** `<to be filled at commit time>`
-- **Commit hash of `data_collection.py` (TWIC version):** `<to be filled at commit time>`
-- **SHA-256 of `PREREGISTRATION-v1.2.md` at freeze:** `<to be filled at commit time>`
+- **Addendum date:** `2026-05-20T20:56:48+02:00`
+- **Commit hash of `data_collection.py` (TWIC version):** `e3f6ce356545f8e9605b8866536104b0af1df5cf`
+- **SHA-256 of `PREREGISTRATION-v1.2.md` at freeze:** `feee71c20ab5171aa927bc9b9eb4eca9631b8b911d37a395891f9b62f75ad02b`
 - **New preregistration tag:** `freeze-v1.2` (annotated; supersedes `freeze-v1.0` and `freeze-v1.1`)
