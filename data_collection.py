@@ -75,6 +75,7 @@ STOCKFISH_DEPTH       = 22
 STOCKFISH_DEPTH_SMOKE = 12             # NOT valid for preregistered claim
 STOCKFISH_THREADS     = 1
 STOCKFISH_HASH_MB     = 256
+STOCKFISH_TIMEOUT_S   = 600            # ADDENDUM-004: per-position timeout
 MATE_SCORE_BASE       = 20000          # mate_in_N → sign · (20000 − 100·N)
 
 # Frozen TP / FO definitions
@@ -305,11 +306,21 @@ def game_id(game: chess.pgn.Game) -> str:
     return hashlib.sha1(str(game).encode()).hexdigest()[:12]
 
 
+class PositionTimeoutError(Exception):
+    """Raised when a single position evaluation exceeds STOCKFISH_TIMEOUT_S.
+    Per ADDENDUM-004: a game with any timed-out position is excluded as a whole
+    from the analysis to avoid mixing partial-depth evals with full-depth evals."""
+    pass
+
+
 def evaluate_game(game: chess.pgn.Game, engine: chess.engine.SimpleEngine,
                   depth: int) -> List[int]:
     """Stockfish evals at every position. evals[t] = eval after t plies (White-perspective cp).
 
     Cached to disk by (game_id, depth, engine_version).
+    ADDENDUM-004: each engine.analyse call is bounded by STOCKFISH_TIMEOUT_S
+    seconds. A timeout raises PositionTimeoutError, signalling the orchestrator
+    to mark the whole game as excluded with reason `position_timeout`.
     """
     gid = game_id(game)
     ver = stockfish_version(engine).replace(" ", "_")
@@ -320,15 +331,35 @@ def evaluate_game(game: chess.pgn.Game, engine: chess.engine.SimpleEngine,
         with open(cache_path) as f:
             return json.load(f)
 
+    limit = chess.engine.Limit(depth=depth, time=STOCKFISH_TIMEOUT_S)
+
     board = game.board()
     evals: List[int] = []
-    info = engine.analyse(board, chess.engine.Limit(depth=depth))
-    evals.append(score_to_cp_white(info["score"]))
 
+    def analyse_or_timeout(b: chess.Board) -> int:
+        import time as _t
+        t0 = _t.monotonic()
+        try:
+            info = engine.analyse(b, limit)
+        except chess.engine.EngineTerminatedError as e:
+            raise PositionTimeoutError(
+                f"Stockfish terminated during analysis (likely timeout after "
+                f"{_t.monotonic() - t0:.1f}s): {e}"
+            ) from e
+        elapsed = _t.monotonic() - t0
+        info_depth = info.get("depth", 0)
+        # Sentinel check: if elapsed >= timeout AND depth < requested, it's a real timeout.
+        if elapsed >= STOCKFISH_TIMEOUT_S - 1 and info_depth < depth:
+            raise PositionTimeoutError(
+                f"Position evaluation hit {STOCKFISH_TIMEOUT_S}s timeout at "
+                f"depth={info_depth} (requested {depth})"
+            )
+        return score_to_cp_white(info["score"])
+
+    evals.append(analyse_or_timeout(board))
     for mv in game.mainline_moves():
         board.push(mv)
-        info = engine.analyse(board, chess.engine.Limit(depth=depth))
-        evals.append(score_to_cp_white(info["score"]))
+        evals.append(analyse_or_timeout(board))
 
     with open(cache_path, "w") as f:
         json.dump(evals, f)
@@ -493,18 +524,30 @@ def run_pipeline(stockfish_path: str, n_games: int, depth: int, mode: str) -> No
             print(f"\n[{i}/{len(games)}] {gid}  "
                   f"{h_short(game,'White')} vs {h_short(game,'Black')}  ply={n_plies}")
 
-            evals = evaluate_game(game, engine, depth=depth)
-            tp    = find_first_turning_point(game, evals)
-            fo    = find_top1_flashover(game, sensor)
+            try:
+                evals = evaluate_game(game, engine, depth=depth)
+                tp    = find_first_turning_point(game, evals)
+                fo    = find_top1_flashover(game, sensor)
 
-            reason = None
-            lag    = None
-            if tp is None:
-                reason = "no_tp_in_first_80_plies"
-            elif fo is None:
-                reason = "no_flashover_detected"
-            else:
-                lag = tp - fo
+                reason = None
+                lag    = None
+                if tp is None:
+                    reason = "no_tp_in_first_80_plies"
+                elif fo is None:
+                    reason = "no_flashover_detected"
+                else:
+                    lag = tp - fo
+            except PositionTimeoutError as e:
+                # ADDENDUM-004: pathological position; whole game excluded.
+                # Engine may be in undefined state; reinitialise for next game.
+                print(f"    POSITION TIMEOUT - {e}")
+                try:
+                    engine.quit()
+                except Exception:
+                    pass
+                engine = make_engine(stockfish_path)
+                tp = fo = None; lag = None
+                reason = "position_timeout"
 
             results.append(GameResult(
                 game_id=gid, file_idx=getattr(game, "_file_idx", -1),
