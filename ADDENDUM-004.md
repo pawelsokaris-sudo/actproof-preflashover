@@ -4,7 +4,7 @@
 **Affected code state:** `data_collection.py` at SHA-256 `e6fecb0539b35058dcb19cc01757b4a4e93b52edd81c85e9706c1356f88a9dcb` (committed at `d634a508`, frozen at `freeze-v1.3`).
 **Aborted run:** started 2026-05-20 ~21:00 CEST, aborted at game [20/50] after ~18.5h compute.
 **Affected runs:** zero preregistered runs were completed under `freeze-v1.3`. Data from the aborted run **MUST NOT** be used in any analysis under any preregistration; 19 partially evaluated game caches remain on disk for replicability inspection only.
-**Corrected commit:** `<TO BE FILLED ON COMMIT>`
+**Corrected commit:** `bead253b4f8ee8da6d7d825456f422de6704ff32` (2026-05-21T18:58:10+02:00).
 **New preregistration tag:** `freeze-v1.4` (supersedes `freeze-v1.3`; statistical and sensor protocol unchanged).
 
 ---
@@ -93,6 +93,6 @@ The cost of this addendum is: 18.5h of v1.3 compute (recovered as cache for 19 g
 ## Sign-off
 
 - **Author:** Paweł Łuczak
-- **Addendum date:** `<TO BE FILLED ON COMMIT>`
-- **Commit hash of corrected `data_collection.py`:** `<TO BE FILLED ON COMMIT>`
+- **Addendum date:** `2026-05-21T18:58:10+02:00`
+- **Commit hash of corrected `data_collection.py`:** `bead253b4f8ee8da6d7d825456f422de6704ff32`
 - **New preregistration tag:** `freeze-v1.4` (annotated; supersedes `freeze-v1.3`)

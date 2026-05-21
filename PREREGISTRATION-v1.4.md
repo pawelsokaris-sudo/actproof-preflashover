@@ -5,8 +5,8 @@
 **Document status:** FROZEN — to be timestamped by Git commit + signed tag before any data collection begins.
 **Supersedes:** `PREREGISTRATION-v1.2.md` (`freeze-v1.2`, `freeze-v1.3`), per ADDENDUM-004.
 **Changes from v1.2:** §3.2 (Stockfish per-position timeout) and §4 (`position_timeout` exclusion category). All other elements bit-for-bit identical.
-**Commit hash of analysis code at time of freeze:** `<TO BE FILLED ON COMMIT>`
-**Date of freeze:** `<TO BE FILLED ON COMMIT>`
+**Commit hash of analysis code at time of freeze:** `bead253b4f8ee8da6d7d825456f422de6704ff32`
+**Date of freeze:** `2026-05-21T18:58:10+02:00`
 
 ---
 
@@ -124,9 +124,9 @@ If any of the above is required to obtain a positive result, the result is **nul
 
 ## Sign-off
 
-- **Author signature (timestamp via Git annotated tag `freeze-v1.2` + external archival):** GPG signature unavailable on author's system at freeze time; cryptographic timestamp guaranteed by external archives (Software Heritage / Zenodo DOI) referenced after archival.
-- **Repository commit hash at freeze:** `<TO BE FILLED>`
-- **SHA-256 of this document at freeze:** `<TO BE FILLED, computed on final version; verifiable via git checkout <freeze-commit> && sha256sum PREREGISTRATION-v1.2.md>`
+- **Author signature (timestamp via Git annotated tag `freeze-v1.4` + external archival):** GPG signature unavailable on author's system at freeze time; cryptographic timestamp guaranteed by external archives (Software Heritage / Zenodo DOI) referenced after archival.
+- **Repository commit hash at freeze:** `bead253b4f8ee8da6d7d825456f422de6704ff32`
+- **SHA-256 of this document at freeze:** `c4f4c711c81802b9bdba0528abe5d7ba930bb933d88449ac4e9dc962314f78c5` (computed on commit `bead253` version with placeholders; verifiable via `git show bead253:PREREGISTRATION-v1.4.md | sha256sum`)
 
 ---
 
