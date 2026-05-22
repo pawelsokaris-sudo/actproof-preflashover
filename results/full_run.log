@@ -1,0 +1,233 @@
+======================================================================
+ActProof Pre-Flashover Detection - FULL
+  PREREGISTRATION-v1.2 - TWIC #1500-#1524
+  n_games = 50, depth = 22
+  stockfish = /tmp/stockfish/stockfish-ubuntu-x86-64-avx2
+======================================================================
+Using cached combined archive: data/twic_1500_1524_combined.pgn
+  (178.6 MB)
+
+Selecting first 50 games matching frozen filter
+  [ 1/50]  idx=   106  Keymer,Vincent    [GM ] vs Dardha,Daniel     [GM ]  Elo 2690/2600  plies=79  <FIDE World Cup 2023>
+  [ 2/50]  idx=   110  Nihal,Sarin       [GM ] vs Bachmann,Ax       [GM ]  Elo 2688/2604  plies=81  <FIDE World Cup 2023>
+  [ 3/50]  idx=   111  Puranik,A         [GM ] vs Svidler,P         [GM ]  Elo 2605/2688  plies=64  <FIDE World Cup 2023>
+  [ 4/50]  idx=   122  Korobov,A         [GM ] vs Iturrizaga Bonelli[GM ]  Elo 2667/2617  plies=138  <FIDE World Cup 2023>
+  [ 5/50]  idx=   133  Durarbayli,Vasif  [GM ] vs Moussard,J        [GM ]  Elo 2631/2654  plies=84  <FIDE World Cup 2023>
+  [ 6/50]  idx=   138  Nguyen,Thai Dai Va[GM ] vs Tari,A            [GM ]  Elo 2642/2641  plies=127  <FIDE World Cup 2023>
+  [ 7/50]  idx=   173  Robson,R          [GM ] vs Fier,A            [GM ]  Elo 2689/2604  plies=159  <FIDE World Cup 2023>
+  [ 8/50]  idx=   174  Bachmann,Ax       [GM ] vs Nihal,Sarin       [GM ]  Elo 2604/2688  plies=84  <FIDE World Cup 2023>
+  [ 9/50]  idx=   185  Gelfand,B         [GM ] vs Berkes,F          [GM ]  Elo 2668/2615  plies=60  <FIDE World Cup 2023>
+  [10/50]  idx=   186  Iturrizaga Bonelli[GM ] vs Korobov,A         [GM ]  Elo 2617/2667  plies=93  <FIDE World Cup 2023>
+  [11/50]  idx=   194  Svane,R           [GM ] vs Saric,Iv          [GM ]  Elo 2625/2657  plies=157  <FIDE World Cup 2023>
+  [12/50]  idx=   195  Narayanan,SL      [GM ] vs Kuzubov,Y         [GM ]  Elo 2656/2628  plies=123  <FIDE World Cup 2023>
+  [13/50]  idx=   213  Huschenbeth,N     [GM ] vs Navara,D          [GM ]  Elo 2603/2689  plies=128  <FIDE World Cup 2023>
+  [14/50]  idx=   215  Esipenko,Andrey   [GM ] vs Safarli,E         [GM ]  Elo 2683/2607  plies=65  <FIDE World Cup 2023>
+  [15/50]  idx=   216  Brkic,A           [GM ] vs Howell,D          [GM ]  Elo 2608/2677  plies=80  <FIDE World Cup 2023>
+  [16/50]  idx=   217  Pechac,Jergus     [GM ] vs Fedoseev,Vl3      [GM ]  Elo 2608/2676  plies=102  <FIDE World Cup 2023>
+  [17/50]  idx=   218  Volokitin,And     [GM ] vs Vocaturo,D        [GM ]  Elo 2674/2609  plies=98  <FIDE World Cup 2023>
+  [18/50]  idx=   219  Bluebaum,M        [GM ] vs Paravyan,D        [GM ]  Elo 2672/2612  plies=71  <FIDE World Cup 2023>
+  [19/50]  idx=   220  Donchenko,Alexa   [GM ] vs Bartel,Mat        [GM ]  Elo 2668/2614  plies=95  <FIDE World Cup 2023>
+  [20/50]  idx=   223  Kollars,Dmitrij   [GM ] vs Ponomariov,R      [GM ]  Elo 2618/2664  plies=153  <FIDE World Cup 2023>
+  [21/50]  idx=   227  Sindarov,Javokhir [GM ] vs Ragger,M          [GM ]  Elo 2659/2624  plies=117  <FIDE World Cup 2023>
+  [22/50]  idx=   228  Santos Latasa,J   [GM ] vs Meier,Geo         [GM ]  Elo 2656/2629  plies=99  <FIDE World Cup 2023>
+  [23/50]  idx=   229  Abasov,N          [GM ] vs Fressinet,L       [GM ]  Elo 2632/2652  plies=95  <FIDE World Cup 2023>
+  [24/50]  idx=   231  Liang,Awonder     [GM ] vs Yilmaz,M          [GM ]  Elo 2649/2639  plies=74  <FIDE World Cup 2023>
+  [25/50]  idx=   243  Navara,D          [GM ] vs Huschenbeth,N     [GM ]  Elo 2689/2603  plies=91  <FIDE World Cup 2023>
+  [26/50]  idx=   244  Grandelius,N      [GM ] vs Antipov,M2        [GM ]  Elo 2684/2606  plies=101  <FIDE World Cup 2023>
+  [27/50]  idx=   245  Safarli,E         [GM ] vs Esipenko,Andrey   [GM ]  Elo 2607/2683  plies=62  <FIDE World Cup 2023>
+  [28/50]  idx=   246  Howell,D          [GM ] vs Brkic,A           [GM ]  Elo 2677/2608  plies=61  <FIDE World Cup 2023>
+  [29/50]  idx=   248  Vocaturo,D        [GM ] vs Volokitin,And     [GM ]  Elo 2609/2674  plies=103  <FIDE World Cup 2023>
+  [30/50]  idx=   250  Bartel,Mat        [GM ] vs Donchenko,Alexa   [GM ]  Elo 2614/2668  plies=103  <FIDE World Cup 2023>
+  [31/50]  idx=   251  Iturrizaga Bonelli[GM ] vs Korobov,A         [GM ]  Elo 2617/2667  plies=130  <FIDE World Cup 2023>
+  [32/50]  idx=   253  Ponomariov,R      [GM ] vs Kollars,Dmitrij   [GM ]  Elo 2664/2618  plies=115  <FIDE World Cup 2023>
+  [33/50]  idx=   254  Svane,Frederik    [GM ] vs Cheparinov,I      [GM ]  Elo 2618/2663  plies=102  <FIDE World Cup 2023>
+  [34/50]  idx=   255  Indjic,A          [GM ] vs Bacrot,E          [GM ]  Elo 2619/2662  plies=130  <FIDE World Cup 2023>
+  [35/50]  idx=   261  Yilmaz,M          [GM ] vs Liang,Awonder     [GM ]  Elo 2639/2649  plies=88  <FIDE World Cup 2023>
+  [36/50]  idx=   262  Gledura,B         [GM ] vs Yakubboev,Nodirbek[GM ]  Elo 2645/2640  plies=87  <FIDE World Cup 2023>
+  [37/50]  idx=   266  Huschenbeth,N     [GM ] vs Navara,D          [GM ]  Elo 2603/2689  plies=68  <FIDE World Cup 2023>
+  [38/50]  idx=   267  Donchenko,Alexa   [GM ] vs Bartel,Mat        [GM ]  Elo 2668/2614  plies=105  <FIDE World Cup 2023>
+  [39/50]  idx=   268  Ivanchuk,V        [GM ] vs Henriquez Villagra[GM ]  Elo 2667/2618  plies=97  <FIDE World Cup 2023>
+  [40/50]  idx=   270  Guseinov,G        [GM ] vs Bjerre,Jonas Buhl [GM ]  Elo 2661/2624  plies=81  <FIDE World Cup 2023>
+  [41/50]  idx=   271  Mamedov,Rau       [GM ] vs Predke,A          [GM ]  Elo 2636/2651  plies=61  <FIDE World Cup 2023>
+  [42/50]  idx=   272  Liang,Awonder     [GM ] vs Yilmaz,M          [GM ]  Elo 2649/2639  plies=36  <FIDE World Cup 2023>
+  [43/50]  idx=   276  Navara,D          [GM ] vs Huschenbeth,N     [GM ]  Elo 2689/2603  plies=51  <FIDE World Cup 2023>
+  [44/50]  idx=   277  Bartel,Mat        [GM ] vs Donchenko,Alexa   [GM ]  Elo 2614/2668  plies=95  <FIDE World Cup 2023>
+  [45/50]  idx=   278  Henriquez Villagra[GM ] vs Ivanchuk,V        [GM ]  Elo 2618/2667  plies=68  <FIDE World Cup 2023>
+  [46/50]  idx=   280  Bjerre,Jonas Buhl [GM ] vs Guseinov,G        [GM ]  Elo 2624/2661  plies=91  <FIDE World Cup 2023>
+  [47/50]  idx=   282  Yilmaz,M          [GM ] vs Liang,Awonder     [GM ]  Elo 2639/2649  plies=77  <FIDE World Cup 2023>
+  [48/50]  idx=   285  Bartel,Mat        [GM ] vs Donchenko,Alexa   [GM ]  Elo 2614/2668  plies=65  <FIDE World Cup 2023>
+  [49/50]  idx=   286  Kollars,Dmitrij   [GM ] vs Ponomariov,R      [GM ]  Elo 2618/2664  plies=128  <FIDE World Cup 2023>
+  [50/50]  idx=   287  Guseinov,G        [GM ] vs Bjerre,Jonas Buhl [GM ]  Elo 2661/2624  plies=111  <FIDE World Cup 2023>
+
+Engine: Stockfish 18
+
+[1/50] 9f7bd94218f3  Keymer,Vincent vs Dardha,Daniel  ply=79
+    TP= 56  FO=  9  lag=+47
+
+[2/50] 404ff73a828d  Nihal,Sarin vs Bachmann,Ax  ply=81
+    TP= 71  FO= 11  lag=+60
+
+[3/50] d314d36eeb56  Puranik,A vs Svidler,P  ply=64
+    EXCLUDED - no_tp_in_first_80_plies
+
+[4/50] 8d5769be9407  Korobov,A vs Iturrizaga Bonelli  ply=138
+    TP= 55  FO= 27  lag=+28
+
+[5/50] 65204d883720  Durarbayli,Vasif vs Moussard,J  ply=84
+    EXCLUDED - no_tp_in_first_80_plies
+
+[6/50] 29b50bea6388  Nguyen,Thai Dai Va vs Tari,A  ply=127
+    EXCLUDED - no_tp_in_first_80_plies
+
+[7/50] a831d87345ea  Robson,R vs Fier,A  ply=159
+    EXCLUDED - no_tp_in_first_80_plies
+
+[8/50] c55e30e8bda2  Bachmann,Ax vs Nihal,Sarin  ply=84
+    TP= 60  FO= 10  lag=+50
+
+[9/50] 3e2f3403ab94  Gelfand,B vs Berkes,F  ply=60
+    TP= 50  FO=  1  lag=+49
+
+[10/50] ab1225d562bf  Iturrizaga Bonelli vs Korobov,A  ply=93
+    TP= 67  FO= 23  lag=+44
+
+[11/50] 2c25314550a5  Svane,R vs Saric,Iv  ply=157
+    EXCLUDED - no_tp_in_first_80_plies
+
+[12/50] d767c56b746e  Narayanan,SL vs Kuzubov,Y  ply=123
+    EXCLUDED - no_tp_in_first_80_plies
+
+[13/50] a70f2b7a328b  Huschenbeth,N vs Navara,D  ply=128
+    TP= 76  FO= 29  lag=+47
+
+[14/50] 972c190b26ff  Esipenko,Andrey vs Safarli,E  ply=65
+    EXCLUDED - no_tp_in_first_80_plies
+
+[15/50] 32c8a8eeb0b5  Brkic,A vs Howell,D  ply=80
+    TP= 64  FO=  9  lag=+55
+
+[16/50] 830ea4475859  Pechac,Jergus vs Fedoseev,Vl3  ply=102
+    TP= 30  FO= 96  lag=-66
+
+[17/50] 98f111075443  Volokitin,And vs Vocaturo,D  ply=98
+    EXCLUDED - no_tp_in_first_80_plies
+
+[18/50] 789ae1ddf339  Bluebaum,M vs Paravyan,D  ply=71
+    TP= 59  FO= 10  lag=+49
+
+[19/50] 2f809b6998e6  Donchenko,Alexa vs Bartel,Mat  ply=95
+    TP= 79  FO=  9  lag=+70
+
+[20/50] 80b66dbec009  Kollars,Dmitrij vs Ponomariov,R  ply=153
+    POSITION TIMEOUT - Position evaluation hit 600s timeout at depth=20 (requested 22)
+    EXCLUDED - position_timeout
+
+[21/50] 6ba8df5c31b9  Sindarov,Javokhir vs Ragger,M  ply=117
+    TP= 31  FO=  9  lag=+22
+
+[22/50] 7fe2307e47aa  Santos Latasa,J vs Meier,Geo  ply=99
+    TP= 71  FO= 21  lag=+50
+
+[23/50] a98431d213d6  Abasov,N vs Fressinet,L  ply=95
+    TP= 63  FO= 15  lag=+48
+
+[24/50] a14f199dfd47  Liang,Awonder vs Yilmaz,M  ply=74
+    EXCLUDED - no_tp_in_first_80_plies
+
+[25/50] f64d00088815  Navara,D vs Huschenbeth,N  ply=91
+    EXCLUDED - no_tp_in_first_80_plies
+
+[26/50] 5f8b146b01ff  Grandelius,N vs Antipov,M2  ply=101
+    TP= 77  FO= 10  lag=+67
+
+[27/50] 9027914e93e6  Safarli,E vs Esipenko,Andrey  ply=62
+    TP= 38  FO= 29  lag=+9
+
+[28/50] e844bd016cd8  Howell,D vs Brkic,A  ply=61
+    TP= 55  FO= 30  lag=+25
+
+[29/50] 4410bd23f1d8  Vocaturo,D vs Volokitin,And  ply=103
+    POSITION TIMEOUT - Position evaluation hit 600s timeout at depth=21 (requested 22)
+    EXCLUDED - position_timeout
+
+[30/50] d0d4c4d76814  Bartel,Mat vs Donchenko,Alexa  ply=103
+    TP= 79  FO= 10  lag=+69
+
+[31/50] 2b752e892801  Iturrizaga Bonelli vs Korobov,A  ply=130
+    TP= 37  FO= 85  lag=-48
+
+[32/50] a9a968115d0b  Ponomariov,R vs Kollars,Dmitrij  ply=115
+    EXCLUDED - no_tp_in_first_80_plies
+
+[33/50] b4e283129619  Svane,Frederik vs Cheparinov,I  ply=102
+    TP= 75  FO=  2  lag=+73
+
+[34/50] bdcca0f5f975  Indjic,A vs Bacrot,E  ply=130
+    EXCLUDED - no_tp_in_first_80_plies
+
+[35/50] fccb2da9482f  Yilmaz,M vs Liang,Awonder  ply=88
+    TP= 58  FO= 12  lag=+46
+
+[36/50] 9894851a4751  Gledura,B vs Yakubboev,Nodirbek  ply=87
+    TP= 29  FO= 16  lag=+13
+
+[37/50] 776da610ff62  Huschenbeth,N vs Navara,D  ply=68
+    TP= 36  FO= 16  lag=+20
+
+[38/50] b925714ef85b  Donchenko,Alexa vs Bartel,Mat  ply=105
+    EXCLUDED - no_tp_in_first_80_plies
+
+[39/50] a6801cbdb539  Ivanchuk,V vs Henriquez Villagra  ply=97
+    TP= 75  FO= 14  lag=+61
+
+[40/50] 8fdf18c1b9a7  Guseinov,G vs Bjerre,Jonas Buhl  ply=81
+    TP= 55  FO= 13  lag=+42
+
+[41/50] 95dcb1a6bc9f  Mamedov,Rau vs Predke,A  ply=61
+    TP= 53  FO= 18  lag=+35
+
+[42/50] 235369741a44  Liang,Awonder vs Yilmaz,M  ply=36
+    TP= 28  FO= 18  lag=+10
+
+[43/50] 14322f0f837a  Navara,D vs Huschenbeth,N  ply=51
+    TP= 33  FO=  7  lag=+26
+
+[44/50] 88337441bbaf  Bartel,Mat vs Donchenko,Alexa  ply=95
+    TP= 31  FO= 28  lag=+3
+
+[45/50] ee235c9e65f3  Henriquez Villagra vs Ivanchuk,V  ply=68
+    TP= 60  FO= 19  lag=+41
+
+[46/50] e40eb3a2f797  Bjerre,Jonas Buhl vs Guseinov,G  ply=91
+    TP= 58  FO= 15  lag=+43
+
+[47/50] ca490b0f054e  Yilmaz,M vs Liang,Awonder  ply=77
+    TP= 30  FO= 31  lag=-1
+
+[48/50] 84a0d330d921  Bartel,Mat vs Donchenko,Alexa  ply=65
+    TP= 49  FO= 15  lag=+34
+
+[49/50] 641547a7a7af  Kollars,Dmitrij vs Ponomariov,R  ply=128
+    TP= 74  FO= 11  lag=+63
+
+[50/50] b6e4f97bb295  Guseinov,G vs Bjerre,Jonas Buhl  ply=111
+    TP= 79  FO= 17  lag=+62
+
+======================================================================
+Statistical analysis (frozen procedure)
+======================================================================
+  Valid games            : 35 / 50
+  Excluded               : 15
+  Median lag (ply)       : +44.00
+  Mean lag (ply)         : +35.60
+  Wilcoxon W             : 577.5
+  Wilcoxon p (one-sided) : 8.547098048700826e-06
+  Permutation P95        : +23.00
+  Primary test           : PASS  (p<0.01 AND median>=1.0)
+  Baseline test          : PASS  (median > permutation P95)
+
+  VERDICT: HYPOTHESIS SUPPORTED - proceed to Go replication with KataGo
+
+Raw results -> results/raw_results_full.json
+Analysis    -> results/analysis_full.json
+FULL_DONE

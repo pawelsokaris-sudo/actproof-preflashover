@@ -1,0 +1,2 @@
+7a4dea2abc26cf2d5b38695a23fb45a399ff43db845cf7860d6972258588cedf  twic_1500_1524_combined.pgn
+Source: TWIC #1500-#1524
