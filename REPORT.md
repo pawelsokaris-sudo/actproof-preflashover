@@ -1,5 +1,10 @@
 # REPORT.md — Pre-Flashover Detection in Grandmaster Chess
 
+> **Note (2026-05-22):** This report covers the primary preregistered run.
+> Secondary controls A-D (recommended by independent review) are pending.
+> Final interpretation will be released as `results-v1.1-final` after those
+> controls are executed. See STATUS.md for current state.
+
 **Projekt:** `actproof-preflashover`
 **Stan:** ZAMKNIĘTY. Pełny preregistrowany run wykonany pod `freeze-v1.4`.
 **Data raportu:** 2026-05-22
