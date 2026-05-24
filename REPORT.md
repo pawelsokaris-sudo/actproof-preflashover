@@ -194,12 +194,12 @@ Pełne wyniki: `SECONDARY_CONTROLS.md`.
 | **B-correlation** | Lag jako artefakt długości | ρ(lag,length)=0.28 (p=0.10 n.s.) | Lag nie jest artefaktem długości partii |
 | **B-permutation** | Phase-matched baseline 1000× | Baseline median=+44 (dokładnie) | Zero resztkowego sygnału w bucket-level |
 
-### Werdykt interpretacyjny — zmiana z INCONCLUSIVE na DISPROVED
+### Werdykt interpretacyjny — zmiana z INCONCLUSIVE na DISPROVED for v1.2 operationalization
 
 Po siedmiu testach kontrolnych zmiana interpretacji:
 
 - **Werdykt mechaniczny** (per preregistrowana decision matrix): **HYPOTHESIS SUPPORTED** — bez zmian. Liczby są prawdziwe, decision matrix zaaplikowany mechanicznie.
-- **Werdykt interpretacyjny** (per secondary controls): **DISPROVED** — operacjonalizacja czujnika v1.2 nie wykrywa pre-flashover w sensie zamierzonym przez H1.
+- **Werdykt interpretacyjny** (per secondary controls): **DISPROVED for v1.2 operationalization** — operacjonalizacja czujnika v1.2 nie wykrywa pre-flashover w sensie zamierzonym przez H1.
 
 ### Konkretny mechanizm confoundu (z Testu E-spatial)
 

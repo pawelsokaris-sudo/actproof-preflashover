@@ -221,7 +221,7 @@ Decision matrix nie został modyfikowany post-hoc.
 
 ### 9.2 Werdykt interpretacyjny (z secondary controls)
 
-**DISPROVED** (zmiana z INCONCLUSIVE z poprzedniej wersji raportu).
+**DISPROVED for v1.2 operationalization** (zmiana z INCONCLUSIVE z poprzedniej wersji raportu).
 
 Operacjonalizacja czujnika v1.2 (1/r Coulomb pole + composite z-score + find_peaks z prominence=0.8) **nie wykrywa pre-flashover w sensie zamierzonym przez H1**. Czujnik funkcjonuje jako **detektor aktywności wokół króla w debiucie**, czego mechanizm jest następujący:
 
@@ -256,6 +256,7 @@ Eksperyment osiągnął wartość naukową niezależnie od interpretacji empiryc
 - **Nie pokazał**, że framework ActProof jako całość jest "obalony". Testowano jedną konkretną operacjonalizację (1/r Coulomb + composite z-score). Inne operacjonalizacje (MultiPV-based, anizotropia per figura z `pieces.py`, struktura przyszłych możliwości) NIE były testowane.
 - **Nie pokazał**, że hipoteza o pre-flashover signal jest niemożliwa do walidacji. Pokazał że ta konkretna operacjonalizacja nie jest właściwym narzędziem.
 - **Nie pokazał**, że "moment 0→1" z AlphaGo–Lee Sedol Game 2 jest artefaktem. Inne metody (KataGo delta_stability) wskazują na ten moment — nasza operacjonalizacja po prostu nie miała narzędzia do jego wykrycia.
+- Eksperyment **NIE kontrolował biasu decisive games**. Preregistracja filtrowała dataset na partie decisive (1-0, 0-1), co znaczy że każda partia w datasecie miała pewien typ rozstrzygnięcia. Remisy (draws) są zwykle dokładniej grane i mogłyby mieć inny rozkład TP_ply. Test C częściowo to dotyka (no-TP games też miały FO wcześnie), ale osobna kontrola decisive vs draw byłaby cenna w przyszłym eksperymencie.
 
 ### 9.5 Co eksperyment pokazał z pewnością
 
@@ -289,7 +290,7 @@ PENDING_FINAL_REVIEW — secondary controls A-F complete, awaiting Paweł's revi
 
 Po review przez Pawła:
 
-1. Tag `results-v1.1-final` (annotated, message: "Final results after seven secondary controls. Mechanical PASS, interpretive DISPROVED.")
+1. Tag `results-v1.1-final` (annotated, message: "Final results after seven secondary controls. Mechanical PASS, interpretive DISPROVED for v1.2 operationalization.")
 2. Software Heritage save post-results
 3. `gh repo archive pawelsokaris-sudo/actproof-preflashover`
 
