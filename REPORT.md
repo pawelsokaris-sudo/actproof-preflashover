@@ -176,6 +176,88 @@ Jeśli ActProof ma być rozwijane dalej, sensowne dalsze kierunki:
 
 (a), (b), (c) są niezależnymi pytaniami. Każde wymaga osobnej decyzji autora projektu.
 
+## 9.5 Secondary Controls — finalna analiza po werdykcie
+
+Po publikacji primary verdict (commit `7760261`, tag `results-v1.0`), wykonano **siedem testów kontrolnych** zaproponowanych przez niezależnych recenzentów (GPT, Claude, Grok) oraz autora (Paweł). Wszystkie testy są **descriptywne i read-only** względem preregistrowanej decision matrix — NIE zmieniają werdyktu mechanicznego.
+
+Pełne wyniki: `SECONDARY_CONTROLS.md`.
+
+### Streszczenie wyników:
+
+| Test | Co testuje | Kluczowy wynik | Wpływ na interpretację |
+|---|---|---|---|
+| **A** Stratified baseline | Resztkowy sygnał ponad bias FO | +44 ∈ [+33, +46], percentile 90% | Brak resztkowego sygnału |
+| **F** Random-game baseline | Czy sensor jest czysto geometryczny | GM median=15, Random=124 (p<10⁻⁸) | Sensor nie czysto geometryczny, ale specyficzny dla teorii debiutowej |
+| **C** Non-TP games control | FO niezależne od TP? | GM=15, no-TP=12 (p=0.24 n.s.) | FO odpala niezależnie od istnienia TP |
+| **E-temporal** | Stabilność czasowa FO | IQR=12 plies, ρ(FO,length)≈0 | FO jest stałoczasowym zdarzeniem debiutowym |
+| **E-spatial** | Per-piece field decomposition | **98% energii pola = król** | Sensor mechanicznie zmuszony do skupienia na królu |
+| **B-correlation** | Lag jako artefakt długości | ρ(lag,length)=0.28 (p=0.10 n.s.) | Lag nie jest artefaktem długości partii |
+| **B-permutation** | Phase-matched baseline 1000× | Baseline median=+44 (dokładnie) | Zero resztkowego sygnału w bucket-level |
+
+### Werdykt interpretacyjny — zmiana z INCONCLUSIVE na DISPROVED
+
+Po siedmiu testach kontrolnych zmiana interpretacji:
+
+- **Werdykt mechaniczny** (per preregistrowana decision matrix): **HYPOTHESIS SUPPORTED** — bez zmian. Liczby są prawdziwe, decision matrix zaaplikowany mechanicznie.
+- **Werdykt interpretacyjny** (per secondary controls): **DISPROVED** — operacjonalizacja czujnika v1.2 nie wykrywa pre-flashover w sensie zamierzonym przez H1.
+
+### Konkretny mechanizm confoundu (z Testu E-spatial)
+
+Test E-spatial dostarczył **konkretnego dowodu mechanizmu** strukturalnego confoundu:
+
+Pole Z(x,y) liczone jako `1/r` Coulomb-like z masami {P:1, N:3, B:3, R:5, Q:9, K:100} jest **w 98% zdominowane przez energię wokół króla**. Wszystkie pozostałe figury razem stanowią mniej niż 2% energii pola.
+
+To znaczy:
+- Masa króla=100 vs pozostałe masy=1-9 daje ratio 11:1 niezależnie od dystansu r.
+- Czujnik **mechanicznie zmuszony** jest mierzyć aktywność wokół króla.
+- "Top-1 flashover" to w 98% **wydarzenia związane z królem** (roszada, ruchy przygotowawcze, zmiana otoczenia).
+- Debiut zawiera intensywne ruchy wokół króla → FO konsekwentnie odpala wczesne (median 15).
+
+**ActProof v1.2 nie jest "detektorem decyzji szachowej". Jest detektorem aktywności wokół króla w debiucie.**
+
+### Cztery niezależne testy konwergują na tej samej diagnozie:
+
+1. **Test A:** Stratified baseline z empirycznej dystrybucji FO_ply → median baseline = +41, obserwowany +44 w 95% CI.
+2. **Test B-permutation:** Phase-matched baseline → median baseline = +44.0 (dokładnie), obserwowany +44 dokładnie na medianie.
+3. **Test C:** Non-TP games → FO_ply identyczne z TP-games (jeśli sensor "wiedział" o nadchodzącym TP, no-TP games powinny mieć inne FO).
+4. **Test E-temporal:** FO_ply nie koreluje z game length ani TP_ply → stałoczasowe zdarzenie debiutowe, nie predyktor.
+
+Konwergencja czterech niezależnych metod na tej samej diagnozie jest **statystycznie i metodologicznie robustna**.
+
+### Konstrukcyjne wady operacjonalizacji v1.2
+
+Z analizy mechanizmu confoundu wynikają trzy konkretne problemy konstrukcyjne:
+
+1. **Mass scaling figur:** Król=100 vs pozostałe (1-9) daje mechaniczną dominację. Każda przyszła iteracja musi rozważyć alternatywne skalowanie (np. równe masy, masy nieliniowe, masy zależne od pozycji).
+
+2. **Field decay function:** `1/r` decay daje globalną dominację dużych mas. Lokalne metryki (krótszy decay, lokalne kernels) mogłyby umożliwić mierzenie figur o niskiej masie.
+
+3. **Peak detection:** `find_peaks` z `prominence=0.8` na composite z-score wybiera **pierwszy główny gradient**, który w GM games jest zawsze przejściem debiutowym. Inne strategie (last significant peak, weighted average peak, pre-TP-window peak) mogłyby dać inne wyniki.
+
+### Co eksperyment NIE pokazał
+
+- **Nie pokazał**, że framework ActProof jako całość jest obalony. Testowano jedną konkretną operacjonalizację.
+- **Nie pokazał**, że hipoteza o pre-flashover signal jest niemożliwa. Pokazał że ta operacjonalizacja nie jest właściwym narzędziem.
+- **Nie pokazał**, że obserwacja AlphaGo–Lee Sedol Game 2 (ruch 37/38) jest artefaktem. Inne metody (KataGo delta_stability) wskazują na ten moment — nasza operacjonalizacja po prostu nie miała narzędzia do jego wykrycia.
+
+### Co eksperyment pokazał z pewnością
+
+- **Operacjonalizacja v1.2 jest martwa** dla testowania pre-flashover detection w obecnej formie.
+- **Konkretny mechanizm confoundu** zidentyfikowany (98% pole = król, ze masy 100).
+- **Trzy konkretne lekcje** dla przyszłych eksperymentów ActProof:
+  1. Permutation baseline musi kontrolować strukturalny bias czujnika.
+  2. Fizyczna analogia nie zastępuje domenowej struktury.
+  3. Pozytywny wynik mechaniczny z confoundem strukturalnym jest gorszy niż jasny negatywny wynik.
+
+### Wpływ na repo
+
+Status repo po tej sekcji: **PENDING_FINAL_REVIEW** — czeka na review przez Pawła przed:
+- Tag `results-v1.1-final`
+- Software Heritage save post-results
+- `gh repo archive`
+
+Po archiwizacji repo staje się read-only, cytowalne, immutable — z kompletnym paper trail od preregistracji przez cztery ADDENDUM-y do siedmiu secondary controls.
+
 ## 10. Osobista nota od autora
 
 Nie jestem naukowcem w sensie instytucjonalnym. Nie mam tytułu, uczelni, publikacji peer-reviewed. Projekt prowadziłem solo, z asystą czterech modeli AI (z którymi konsultowałem różne fragmenty) i jednego asystenta operacyjnego (DEP).
@@ -211,6 +293,15 @@ To wystarczy.
 | `results/archive_sha256.txt` | Deterministyczny anchor datasetu TWIC. |
 | `results/diagnostic_breakdown.log` | Evidence dla ADDENDUM-002. |
 | `REPORT.md` | Ten dokument. |
+| `SECONDARY_CONTROLS.md` | Siedem kontroli wtórnych (A, F, C, E-temporal, E-spatial, B-correlation, B-permutation). |
+| `STATUS.md` | Status repozytorium. |
+| `secondary_controls_helpers.py` | Helper do Testu A (stratified permutation). |
+| `test_b_lag_length.py` | Test B-correlation. |
+| `test_b_permutation.py` | Test B-permutation (phase-matched). |
+| `test_c_notp_fo.py` | Test C (non-TP games FO). |
+| `test_e_per_piece.py` | Test E-temporal (timing correlations). |
+| `test_e_spatial.py` | Test E-spatial (per-piece decomposition). |
+| `test_f_random_baseline.py` | Test F (random-game baseline). |
 
 ## Replikacja
 

@@ -1,0 +1,164 @@
+[2026-05-24 10:30:08] TEST_A: START
+[2026-05-24 10:30:08] TEST_A: Valid games: 35
+[2026-05-24 10:30:08] TEST_A: Observed FO_ply: median=15.0, mean=19.9
+[2026-05-24 10:30:08] TEST_A: Observed TP_ply: median=58.0, mean=55.5
+[2026-05-24 10:30:08] TEST_A: Observed median lag: 44.0
+[2026-05-24 10:30:08] TEST_A: Running 1000 simulations (seeds 42..1041)
+[2026-05-24 10:30:09] TEST_A: Stratified baseline median: 41.0
+[2026-05-24 10:30:09] TEST_A: Stratified baseline 95% CI: [33.0, 46.0]
+[2026-05-24 10:30:09] TEST_A: Observed +44 within 95% CI: True
+[2026-05-24 10:30:09] TEST_A: Observed percentile in distribution: 90.3%
+[2026-05-24 10:30:09] TEST_A: Interpretation: Observed +44 falls WITHIN the 95% interval [33.0, 46.0] of the stratified baseline (median=41.0). Structural confound fully explains the observed effect.
+[2026-05-24 10:30:09] TEST_A: Results cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_a.json
+[2026-05-24 10:30:09] TEST_A: DONE
+[2026-05-24 10:40:13] TEST_F: START
+[2026-05-24 10:40:13] TEST_F: GM baseline: n=35, FO_ply median=15.0
+[2026-05-24 10:40:13] TEST_F: Generating 50 random-vs-random games (seeds 42..91)
+[2026-05-24 10:40:13] TEST_F:   Generated 10/50
+[2026-05-24 10:40:13] TEST_F:   Generated 20/50
+[2026-05-24 10:40:13] TEST_F:   Generated 30/50
+[2026-05-24 10:40:13] TEST_F:   Generated 40/50
+[2026-05-24 10:40:13] TEST_F:   Generated 50/50
+[2026-05-24 10:40:14] TEST_F: Random games saved to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_f_random_games.pgn
+[2026-05-24 10:40:14] TEST_F: Random game stats: n=50, mean_plies=183.0, median_plies=200.0, min=30, max=200
+[2026-05-24 10:40:14] TEST_F: End types: {'max_plies': 43, 'black_checkmate': 3, 'white_checkmate': 4}
+[2026-05-24 10:40:14] TEST_F: Running ActProof FO sensor on random games...
+[2026-05-24 10:40:34] TEST_F:   Analyzed 5/50
+[2026-05-24 10:40:54] TEST_F:   Analyzed 10/50
+[2026-05-24 10:41:16] TEST_F:   Analyzed 15/50
+[2026-05-24 10:41:38] TEST_F:   Analyzed 20/50
+[2026-05-24 10:42:01] TEST_F:   Analyzed 25/50
+[2026-05-24 10:42:24] TEST_F:   Analyzed 30/50
+[2026-05-24 10:42:39] TEST_F:   Analyzed 35/50
+[2026-05-24 10:43:03] TEST_F:   Analyzed 40/50
+[2026-05-24 10:43:26] TEST_F:   Analyzed 45/50
+[2026-05-24 10:43:49] TEST_F:   Analyzed 50/50
+[2026-05-24 10:43:49] TEST_F: Random FO detected in 50/50 games
+[2026-05-24 10:43:49] TEST_F: Result: FO_ply distributions are significantly different (Mann-Whitney p=0.0000, KS p=0.0000). The sensor detects something specific to GM play. GM median FO=15, Random median FO=124.
+[2026-05-24 10:49:29] TEST_F: START
+[2026-05-24 10:49:29] TEST_F: Loading cached results from C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_f.json
+[2026-05-24 10:55:03] TEST_F: START
+[2026-05-24 10:55:03] TEST_F: GM baseline: n=35, FO_ply median=15.0
+[2026-05-24 10:55:03] TEST_F: Generating 50 random-vs-random games (seeds 42..91)
+[2026-05-24 10:55:03] TEST_F:   Generated 10/50
+[2026-05-24 10:55:03] TEST_F:   Generated 20/50
+[2026-05-24 10:55:04] TEST_F:   Generated 30/50
+[2026-05-24 10:55:04] TEST_F:   Generated 40/50
+[2026-05-24 10:55:04] TEST_F:   Generated 50/50
+[2026-05-24 10:55:04] TEST_F: Random games saved to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_f_random_games.pgn
+[2026-05-24 10:55:04] TEST_F: Random game stats: n=50, mean_plies=183.0, median_plies=200.0, min=30, max=200
+[2026-05-24 10:55:04] TEST_F: End types: {'max_plies': 43, 'black_checkmate': 3, 'white_checkmate': 4}
+[2026-05-24 10:55:04] TEST_F: Running ActProof FO sensor on random games...
+[2026-05-24 10:55:25] TEST_F:   Analyzed 5/50
+[2026-05-24 10:55:45] TEST_F:   Analyzed 10/50
+[2026-05-24 10:56:08] TEST_F:   Analyzed 15/50
+[2026-05-24 10:56:31] TEST_F:   Analyzed 20/50
+[2026-05-24 10:56:55] TEST_F:   Analyzed 25/50
+[2026-05-24 10:57:19] TEST_F:   Analyzed 30/50
+[2026-05-24 10:57:38] TEST_F:   Analyzed 35/50
+[2026-05-24 10:58:07] TEST_F:   Analyzed 40/50
+[2026-05-24 10:58:32] TEST_F:   Analyzed 45/50
+[2026-05-24 10:58:55] TEST_F:   Analyzed 50/50
+[2026-05-24 10:58:55] TEST_F: Random FO detected in 50/50 games
+[2026-05-24 10:58:55] TEST_F: Result: FO_ply distributions are significantly different (Mann-Whitney p=0.0000, KS p=0.0000). The sensor detects something specific to GM play. GM median FO=15, Random median FO=124.
+[2026-05-24 10:58:55] TEST_F: Results cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_f.json
+[2026-05-24 10:58:55] TEST_F: DONE
+[2026-05-24 15:51:56] TEST_C: START
+[2026-05-24 15:51:56] TEST_C: Valid games: 35
+[2026-05-24 15:51:56] TEST_C: No-TP games: 13
+[2026-05-24 15:51:56] TEST_C: Timeout games: 2
+[2026-05-24 15:51:56] TEST_C: Valid FO_ply available: 35/35
+[2026-05-24 15:51:56] TEST_C: No-TP FO_ply available: 13/13
+[2026-05-24 15:51:56] TEST_C:   No-TP game d314d36eeb56: fo_ply=12, n_plies=64
+[2026-05-24 15:51:56] TEST_C:   No-TP game 65204d883720: fo_ply=14, n_plies=84
+[2026-05-24 15:51:56] TEST_C:   No-TP game 29b50bea6388: fo_ply=11, n_plies=127
+[2026-05-24 15:51:56] TEST_C:   No-TP game a831d87345ea: fo_ply=2, n_plies=159
+[2026-05-24 15:51:56] TEST_C:   No-TP game 2c25314550a5: fo_ply=12, n_plies=157
+[2026-05-24 15:51:56] TEST_C:   No-TP game d767c56b746e: fo_ply=15, n_plies=123
+[2026-05-24 15:51:56] TEST_C:   No-TP game 972c190b26ff: fo_ply=13, n_plies=65
+[2026-05-24 15:51:56] TEST_C:   No-TP game 98f111075443: fo_ply=81, n_plies=98
+[2026-05-24 15:51:56] TEST_C:   No-TP game a14f199dfd47: fo_ply=18, n_plies=74
+[2026-05-24 15:51:56] TEST_C:   No-TP game f64d00088815: fo_ply=9, n_plies=91
+[2026-05-24 15:51:56] TEST_C:   No-TP game a9a968115d0b: fo_ply=1, n_plies=115
+[2026-05-24 15:51:56] TEST_C:   No-TP game bdcca0f5f975: fo_ply=17, n_plies=130
+[2026-05-24 15:51:56] TEST_C:   No-TP game b925714ef85b: fo_ply=9, n_plies=105
+[2026-05-24 15:51:56] TEST_C: Valid FO: median=15.0, mean=19.9
+[2026-05-24 15:51:56] TEST_C: No-TP FO: median=12.0, mean=16.5
+[2026-05-24 15:51:56] TEST_C: Mann-Whitney U: U=279.0, p=0.235788
+[2026-05-24 15:51:56] TEST_C: KS: D=0.2374, p=0.563043
+[2026-05-24 15:51:56] TEST_C: Interpretation: FO_ply distributions are NOT significantly different between valid (median=15) and no-TP (median=12) games (MW p=0.2358, KS p=0.5630). FO timing is independent of TP existence. Supports opening-structural interpretation.
+[2026-05-24 15:51:56] TEST_C: Cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_c.json
+[2026-05-24 15:51:56] TEST_C: DONE
+[2026-05-24 16:26:57] TEST_E: START
+[2026-05-24 16:26:57] TEST_E: Valid games: 35
+[2026-05-24 16:26:57] TEST_E: ERROR: Combined PGN not found at C:\Users\pawel\projects\actproof-preflashover\data\twic_1500_1524_combined.pgn
+[2026-05-24 16:26:57] TEST_E: Cannot run Test E without PGN data to replay positions.
+[2026-05-24 16:26:57] TEST_E: Falling back to statistical analysis from raw data only.
+[2026-05-24 16:26:57] TEST_E: Running fallback analysis (FO_ply patterns only)
+[2026-05-24 16:26:57] TEST_E: Cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_e.json
+[2026-05-24 16:26:57] TEST_E: DONE
+[2026-05-24 16:28:48] TEST_E: START
+[2026-05-24 16:28:48] TEST_E: Valid games: 35, All with FO: 48
+[2026-05-24 16:28:48] TEST_E: FO vs game_length: Pearson r=0.2835 p=0.0989, Spearman rho=0.1010 p=0.5636
+[2026-05-24 16:28:48] TEST_E: FO vs TP: Pearson r=-0.3911 p=0.0202, Spearman rho=-0.3271 p=0.0551
+[2026-05-24 16:28:48] TEST_E: FO distribution: Q25=10.0, median=15.0, Q75=22.0, IQR=12.0
+[2026-05-24 16:28:48] TEST_E: FO in opening-exit band (ply 8-18): 21/35 (60%)
+[2026-05-24 16:28:48] TEST_E: ALL games FO vs game_length: Spearman rho=-0.0379 p=0.7982
+[2026-05-24 16:28:48] TEST_E: Running Kasparov-Topalov demo for energy dynamics at FO...
+[2026-05-24 16:28:51] TEST_E: Demo FO: ply=22, san=12. Kb1, channel=T_max, z=4.09
+[2026-05-24 16:28:51] TEST_E: Interpretation: FO is independent of game length (Spearman rho=0.101, p=0.564). FO is independent of TP timing (Spearman rho=-0.327, p=0.055). 21/35 (60%) FO events cluster in opening-exit band (ply 8-18). FO IQR=12 plies — narrow band confirms FO is a fixed-timing event, not correlated with game-specific dynamics.
+[2026-05-24 16:28:51] TEST_E: Cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_e.json
+[2026-05-24 16:28:51] TEST_E: DONE
+[2026-05-24 16:31:00] TEST_B: START
+[2026-05-24 16:31:00] TEST_B: Valid games: 35
+[2026-05-24 16:31:00] TEST_B: TP vs game_length: Spearman rho=0.4359 p=0.008865
+[2026-05-24 16:31:00] TEST_B: Lag vs game_length: Spearman rho=0.2835 p=0.098869
+[2026-05-24 16:31:00] TEST_B: FO/game_length ratio: median=0.160, mean=0.229
+[2026-05-24 16:31:00] TEST_B: TP/game_length ratio: median=0.712, mean=0.653
+[2026-05-24 16:31:00] TEST_B: Stratified lag: short median=38.0, long median=48.0, MW p=0.1094
+[2026-05-24 16:31:20] TEST_B: START
+[2026-05-24 16:31:20] TEST_B: Valid games: 35
+[2026-05-24 16:31:20] TEST_B: TP vs game_length: Spearman rho=0.4359 p=0.008865
+[2026-05-24 16:31:20] TEST_B: Lag vs game_length: Spearman rho=0.2835 p=0.098869
+[2026-05-24 16:31:20] TEST_B: FO/game_length ratio: median=0.160, mean=0.229
+[2026-05-24 16:31:20] TEST_B: TP/game_length ratio: median=0.712, mean=0.653
+[2026-05-24 16:31:20] TEST_B: Stratified lag: short median=38.0, long median=48.0, MW p=0.1094
+[2026-05-24 16:31:20] TEST_B: Interpretation: TP correlates with game length (ρ=0.436, p=0.0089) — longer games have later first mistakes, as expected. Lag does NOT correlate with game length (ρ=0.284, p=0.0989) — lag is stable across short and long games. FO fires at 16.0% into the game (median ratio), while TP fires at 71.2% — the gap is structural, not duration-dependent. Stratified check: short games lag=38, long games lag=48 — no significant difference (MW p=0.109).
+[2026-05-24 16:31:20] TEST_B: Cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_b.json
+[2026-05-24 16:31:20] TEST_B: DONE
+[2026-05-24 16:35:42] TEST_E_SPATIAL: START
+[2026-05-24 16:35:42] TEST_E_SPATIAL: Computing starting position decomposition...
+[2026-05-24 16:35:42] TEST_E_SPATIAL:   Start E_total=991114.4
+[2026-05-24 16:35:42] TEST_E_SPATIAL:   Start King: removal_E=971467.1, pct=98.0%
+[2026-05-24 16:35:42] TEST_E_SPATIAL:   Start Queen: removal_E=10264.9, pct=1.0%
+[2026-05-24 16:35:42] TEST_E_SPATIAL:   Start Rook: removal_E=6462.8, pct=0.7%
+[2026-05-24 16:35:42] TEST_E_SPATIAL:   Start Bishop: removal_E=2708.4, pct=0.3%
+[2026-05-24 16:35:42] TEST_E_SPATIAL:   Start Knight: removal_E=2096.3, pct=0.2%
+[2026-05-24 16:35:42] TEST_E_SPATIAL:   Start Pawn: removal_E=1577.7, pct=0.2%
+[2026-05-24 16:35:42] TEST_E_SPATIAL: Analyzing Kasparov-Topalov 1999...
+[2026-05-24 16:35:45] TEST_E_SPATIAL:   KT FO at ply 22: 12. Kb1
+[2026-05-24 16:35:45] TEST_E_SPATIAL:   KT ply 0 (start): E=991114.4
+[2026-05-24 16:35:45] TEST_E_SPATIAL:   KT ply 20 (fo_minus_2): E=988897.9
+[2026-05-24 16:35:45] TEST_E_SPATIAL:   KT ply 22 (fo): E=1020497.1
+[2026-05-24 16:35:45] TEST_E_SPATIAL:   KT ply 24 (fo_plus_2): E=1086847.1
+[2026-05-24 16:35:45] TEST_E_SPATIAL:   KT ply 43 (mid_game): E=1182093.3
+[2026-05-24 16:35:45] TEST_E_SPATIAL:   KT ply 73 (endgame): E=1083526.2
+[2026-05-24 16:35:45] TEST_E_SPATIAL: Analyzing random games at FO...
+[2026-05-24 16:35:46] TEST_E_SPATIAL:   Loaded 50 random games from cache
+[2026-05-24 16:35:58] TEST_E_SPATIAL:   Processed 3 random games
+[2026-05-24 16:36:12] TEST_E_SPATIAL:   Processed 6 random games
+[2026-05-24 16:36:26] TEST_E_SPATIAL:   Processed 9 random games
+[2026-05-24 16:36:31] TEST_E_SPATIAL:   Total random decompositions: 10
+[2026-05-24 16:36:31] TEST_E_SPATIAL: Interpretation: At FO (ply 22), field energy is dominated by King (98.2% of removal energy). From start to FO, King contribution increased by +0.2pp while Bishop decreased by -0.2pp. Random games at FO (avg ply 115): King contribution = 99.1% vs GM FO King = 98.2%. At FO, GM game has lost 2 pieces vs random games 14.1 pieces — GM FO occurs with near-full material, confirming it's an opening development signal, not a material-change signal.
+[2026-05-24 16:36:31] TEST_E_SPATIAL: Cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_e_spatial.json
+[2026-05-24 16:36:31] TEST_E_SPATIAL: DONE
+[2026-05-24 16:37:01] TEST_B_PERM: START
+[2026-05-24 16:37:01] TEST_B_PERM: Valid games: 35
+[2026-05-24 16:37:01] TEST_B_PERM: Observed median lag: 44.0
+[2026-05-24 16:37:01] TEST_B_PERM: Phase bucket distribution: {'0-20': 25, '20-40': 8, '60-end': 2}
+[2026-05-24 16:37:01] TEST_B_PERM: Permutation baseline: median=44.0, 95% CI=[39.0, 48.0]
+[2026-05-24 16:37:01] TEST_B_PERM: Observed 44 at percentile 62.9%
+[2026-05-24 16:37:01] TEST_B_PERM: Within 95% CI: True
+[2026-05-24 16:37:01] TEST_B_PERM: Interpretation: Observed median lag (+44) falls WITHIN the phase-matched 95% CI [39.0, 48.0] (baseline median = +44.0, percentile = 62.9%). Even when controlling for phase (early/mid/late), the lag is fully explained by the structural position of FO within its phase bucket.
+[2026-05-24 16:37:01] TEST_B_PERM: Cached to C:\Users\pawel\projects\actproof-preflashover\cache\secondary_test_b_perm.json
+[2026-05-24 16:37:01] TEST_B_PERM: DONE
